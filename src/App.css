@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header.bg-primary {
+  background-color: #004080 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer.bg-light {
+  background-color: #e9ecef !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 1s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.skill-badges .badge {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.skill-badges .badge:hover {
+  transform: scale(1.1);
+  background-color: #004080;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary,
+.btn-outline-light,
+.btn-light {
+  background-color: #004080 !important;
+  border-color: #004080 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-outline-light:hover,
+.btn-light:hover {
+  background-color: #003366 !important;
+  border-color: #003366 !important;
+}
+
+/* Icon styles */
+a svg {
+  color: #004080;
+  transition: color 0.3s ease;
+}
+a svg:hover {
+  color: #003366;
+}
+
+/* Link styles */
+a {
+  color: #004080;
+  text-decoration: none;
+}
+a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/* Section spacing */
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
